@@ -141,7 +141,6 @@ export default function About() {
                 />
                 <motion.div
                   whileHover={{ rotate: 360, scale: 1.2 }}
-                  transition={{ duration: 0.6, type: 'spring' }}
                   className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${feature.color} flex items-center justify-center relative z-10`}
                   animate={{
                     boxShadow: [
@@ -154,6 +153,8 @@ export default function About() {
                     duration: 2,
                     repeat: Infinity,
                     delay: index * 0.2,
+                    type: 'spring',
+                    stiffness: 100,
                   }}
                 >
                   <Icon className="w-8 h-8 text-white" />
